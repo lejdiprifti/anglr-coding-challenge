@@ -11,7 +11,6 @@ import { CommonModule, DatePipe } from '@angular/common'
   styleUrl: './table-view.component.sass',
 })
 export class TableViewComponent {
-  WORKATIONS_URL = 'http://localhost:8080/workflex/workation'
 
   public workations: Workation[] = []
 
@@ -20,7 +19,7 @@ export class TableViewComponent {
   }
 
   async loadWorkations() {
-    const response = await axios.get(this.WORKATIONS_URL)
+    const response = await axios.get(WORKATIONS_URL)
     this.workations = await response.data
     console.log(this.workations)
   }

@@ -17,14 +17,14 @@ export class LoginViewComponent {
     private router: Router,
   ) {}
 
-  LOGIN_URL = 'http://localhost:8080/auth/login'
+  
 
   email: string = ''
   password: string = ''
 
   async onSubmit() {
     await axios
-      .post(this.LOGIN_URL, {
+      .post(LOGIN_URL, {
         email: this.email,
         password: this.password,
       })
