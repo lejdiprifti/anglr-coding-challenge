@@ -1,0 +1,29 @@
+<div class="container-fluid d-flex align-items-center justify-content-center login-container">
+  <div class="text-center form-container">
+    <img src="assets/worflex.svg" alt="Company Logo" class="mb-4 text-center" />
+
+    <form (ngSubmit)="onSubmit()">
+      <div class="container mb-4">
+        <div class="row">
+          <div class="col col-3"><label for="email" class="form-label">Email</label></div>
+
+          <div class="col col-9">
+            <input type="email" id="email" class="form-control" name="email" [(ngModel)]="email" />
+          </div>
+        </div>
+      </div>
+
+      <div class="container mb-4">
+        <div class="row">
+          <div class="col col-3"><label for="password" class="form-label">Password</label></div>
+
+          <div class="col col-9">
+            <input type="password" id="password" class="form-control" name="password" [(ngModel)]="password" />
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-success btn-block">Login</button>
+    </form>
+  </div>
+</div>
