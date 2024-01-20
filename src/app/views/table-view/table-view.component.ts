@@ -11,7 +11,6 @@ import { CommonModule, DatePipe } from '@angular/common'
   styleUrl: './table-view.component.sass',
 })
 export class TableViewComponent {
-
   public workations: Workation[] = []
 
   async ngOnInit() {

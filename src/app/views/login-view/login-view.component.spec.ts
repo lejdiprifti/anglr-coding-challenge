@@ -8,18 +8,19 @@ import { Router } from '@angular/router'
 describe('LoginViewComponent', () => {
   let component: LoginViewComponent
   let fixture: ComponentFixture<LoginViewComponent>
-  let router: Router;
-  let toastrService: ToastrService;
+  let router: Router
+  let toastrService: ToastrService
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LoginViewComponent, ToastrModule.forRoot(), FormsModule], providers: [ToastrService],
+      imports: [LoginViewComponent, ToastrModule.forRoot(), FormsModule],
+      providers: [ToastrService],
     }).compileComponents()
 
     fixture = TestBed.createComponent(LoginViewComponent)
     component = fixture.componentInstance
-    router = TestBed.inject(Router);
-    toastrService = TestBed.inject(ToastrService);
+    router = TestBed.inject(Router)
+    toastrService = TestBed.inject(ToastrService)
     fixture.detectChanges()
   })
 
@@ -27,43 +28,38 @@ describe('LoginViewComponent', () => {
     expect(component).toBeTruthy()
   })
 
-
   it('should not login', async () => {
-    const navigateSpy = spyOn(router, 'navigate');
-    const toastrSpy = spyOn(toastrService, 'error');
+    const navigateSpy = spyOn(router, 'navigate')
+    const toastrSpy = spyOn(toastrService, 'error')
     const email = 'admin@example.com'
     const password = 'password'
 
-    component.email = email;
-    component.password = password;
-    fixture.detectChanges();
+    component.email = email
+    component.password = password
+    fixture.detectChanges()
 
-    const button = fixture.nativeElement.querySelectorAll('.btn');
-    expect(button.length).toBe(1);
+    const button = fixture.nativeElement.querySelectorAll('.btn')
+    expect(button.length).toBe(1)
 
     await component.onSubmit()
-    expect(toastrSpy).toHaveBeenCalledWith('Login failed!');
-    
-   
-  });
+    expect(toastrSpy).toHaveBeenCalledWith('Login failed!')
+  })
 
   it('should login', async () => {
-    const navigateSpy = spyOn(router, 'navigate');
-    const toastrSpy = spyOn(toastrService, 'success');
+    const navigateSpy = spyOn(router, 'navigate')
+    const toastrSpy = spyOn(toastrService, 'success')
     const email = 'admin@lejdiprifti.com'
     const password = 'password'
 
-    component.email = email;
-    component.password = password;
-    fixture.detectChanges();
+    component.email = email
+    component.password = password
+    fixture.detectChanges()
 
-    const button = fixture.nativeElement.querySelectorAll('.btn');
-    expect(button.length).toBe(1);
+    const button = fixture.nativeElement.querySelectorAll('.btn')
+    expect(button.length).toBe(1)
 
     await component.onSubmit()
     expect(navigateSpy).toHaveBeenCalledWith(['dashboard'])
-    expect(toastrSpy).toHaveBeenCalledWith('Login successful!');
-    
-   
-  });
+    expect(toastrSpy).toHaveBeenCalledWith('Login successful!')
+  })
 })

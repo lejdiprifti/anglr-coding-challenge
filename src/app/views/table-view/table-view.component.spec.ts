@@ -32,21 +32,20 @@ describe('TableViewComponent', () => {
         workingDays: 10,
         risk: 'LOW' as any,
       },
-    ];
+    ]
 
-    component.workations = workations;
-    fixture.detectChanges();
+    component.workations = workations
+    fixture.detectChanges()
 
-    const tableRows = fixture.nativeElement.querySelectorAll('tbody tr');
-    expect(tableRows.length).toBe(workations.length);
+    const tableRows = fixture.nativeElement.querySelectorAll('tbody tr')
+    expect(tableRows.length).toBe(workations.length)
 
     tableRows.forEach((row: { textContent: any }, index: string | number) => {
-      const rowData = workations[index as any];
+      const rowData = workations[index as any]
 
-      expect(row.textContent).toContain(rowData.employee);
-      expect(row.textContent).toContain(rowData.origin);
-      expect(row.textContent).toContain(rowData.destination);
-    });
-  });
-
+      expect(row.textContent).toContain(rowData.employee)
+      expect(row.textContent).toContain(rowData.origin)
+      expect(row.textContent).toContain(rowData.destination)
+    })
+  })
 })

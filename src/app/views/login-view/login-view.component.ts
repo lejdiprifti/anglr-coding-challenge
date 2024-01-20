@@ -17,8 +17,6 @@ export class LoginViewComponent {
     private router: Router,
   ) {}
 
-  
-
   email: string = ''
   password: string = ''
 
