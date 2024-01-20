@@ -9,6 +9,6 @@ export const routes: Routes = [
   },
   {
     path: 'dashboard',
-    component: TableViewComponent
-  }
+    component: TableViewComponent,
+  },
 ]

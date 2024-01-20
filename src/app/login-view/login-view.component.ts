@@ -12,7 +12,10 @@ import { ToastrModule, ToastrService } from 'ngx-toastr'
   styleUrl: './login-view.component.sass',
 })
 export class LoginViewComponent {
-  constructor(private toastr: ToastrService, private router: Router) {}
+  constructor(
+    private toastr: ToastrService,
+    private router: Router,
+  ) {}
 
   LOGIN_URL = 'http://localhost:8080/auth/login'
 

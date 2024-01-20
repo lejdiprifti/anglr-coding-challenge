@@ -1,41 +1,40 @@
 <div class="container">
-
-    <div class="table-responsive">
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Employee</th>
-                    <th>Origin</th>
-                    <th>Destination</th>
-                    <th>Start Date</th>
-                    <th>End Date</th>
-                    <th>Working Days</th>
-                    <th>Risk</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let workation of workations" class="text-center">
-                    <td class="row name-td">
-                        <div class="avatar col-6">
-                            {{ workation.employee.split(' ')[0].charAt(0) }} {{workation.employee.split(' ')[1].charAt(0)}}
-                          </div>
-                          <div class="col-6">
-                        {{ workation.employee }}
-                    </div>
-                    </td>
-                    <td>{{ workation.origin }}</td>
-                    <td>{{ workation.destination }}</td>
-                    <td>{{ workation.startDate | date:'MM/dd/yyyy' }}</td>
-                    <td>{{ workation.endDate | date:'MM/dd/yyyy' }}</td>
-                    <td>{{ workation.workingDays }}</td>
-                    <td>
-                        <i *ngIf="workation.risk === 'NO'" class="bi bi-shield-check text-success"></i>
-                        <i *ngIf="workation.risk === 'LOW'" class="bi bi-shield-check text-warning"></i>
-                        <i *ngIf="workation.risk === 'HIGH'" class="bi bi-shield-check text-danger"></i>
-                        {{ workation.risk | titlecase }} risk
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Employee</th>
+          <th>Origin</th>
+          <th>Destination</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Working Days</th>
+          <th>Risk</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let workation of workations" class="text-center">
+          <td class="row name-td">
+            <div class="avatar col-6">
+              {{ workation.employee.split(' ')[0].charAt(0) }} {{ workation.employee.split(' ')[1].charAt(0) }}
+            </div>
+            <div class="col-6">
+              {{ workation.employee }}
+            </div>
+          </td>
+          <td>{{ workation.origin }}</td>
+          <td>{{ workation.destination }}</td>
+          <td>{{ workation.startDate | date: 'MM/dd/yyyy' }}</td>
+          <td>{{ workation.endDate | date: 'MM/dd/yyyy' }}</td>
+          <td>{{ workation.workingDays }}</td>
+          <td>
+            <i *ngIf="workation.risk === 'NO'" class="bi bi-shield-check text-success"></i>
+            <i *ngIf="workation.risk === 'LOW'" class="bi bi-shield-check text-warning"></i>
+            <i *ngIf="workation.risk === 'HIGH'" class="bi bi-shield-check text-danger"></i>
+            {{ workation.risk | titlecase }} risk
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
