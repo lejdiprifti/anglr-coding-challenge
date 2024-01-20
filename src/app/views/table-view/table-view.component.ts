@@ -17,9 +17,8 @@ export class TableViewComponent {
     await this.loadWorkations()
   }
 
-  async loadWorkations() {
+  private async loadWorkations() {
     const response = await axios.get(WORKATIONS_URL)
     this.workations = await response.data
-    console.log(this.workations)
   }
 }

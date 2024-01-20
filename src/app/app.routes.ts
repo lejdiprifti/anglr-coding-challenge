@@ -4,11 +4,11 @@ import { TableViewComponent } from './views/table-view/table-view.component'
 
 export const routes: Routes = [
   {
-    path: '',
+    path: BASE_PATH,
     component: LoginViewComponent,
   },
   {
-    path: 'dashboard',
+    path: DASHBOARD_PATH,
     component: TableViewComponent,
   },
 ]

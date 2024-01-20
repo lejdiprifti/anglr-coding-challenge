@@ -12,13 +12,13 @@ import { ToastrModule, ToastrService } from 'ngx-toastr'
   styleUrl: './login-view.component.sass',
 })
 export class LoginViewComponent {
+  email: string = ''
+  password: string = ''
+
   constructor(
     private toastr: ToastrService,
     private router: Router,
   ) {}
-
-  email: string = ''
-  password: string = ''
 
   async onSubmit() {
     await axios
@@ -28,7 +28,7 @@ export class LoginViewComponent {
       })
       .then(() => {
         this.toastr.success('Login successful!')
-        this.router.navigate(['dashboard'])
+        this.router.navigate([DASHBOARD_PATH])
       })
       .catch(() => {
         this.toastr.error('Login failed!')
