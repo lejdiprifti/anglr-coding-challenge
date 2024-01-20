@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router'
-import { LoginViewComponent } from './login-view/login-view.component'
-import { TableViewComponent } from './table-view/table-view.component'
+import { LoginViewComponent } from './views/login-view/login-view.component'
+import { TableViewComponent } from './views/table-view/table-view.component'
 
 export const routes: Routes = [
   {

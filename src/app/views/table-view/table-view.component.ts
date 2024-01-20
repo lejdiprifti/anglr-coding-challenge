@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import { Workation } from '../models/workation'
+import { Workation } from '../../models/workation'
 import axios from 'axios'
 import { CommonModule, DatePipe } from '@angular/common'
 
