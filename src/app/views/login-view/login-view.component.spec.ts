@@ -4,6 +4,7 @@ import { LoginViewComponent } from './login-view.component'
 import { ToastrModule, ToastrService } from 'ngx-toastr'
 import { FormsModule } from '@angular/forms'
 import { Router } from '@angular/router'
+import { DASHBOARD_PATH } from '../../constants'
 
 describe('LoginViewComponent', () => {
   let component: LoginViewComponent
@@ -59,7 +60,7 @@ describe('LoginViewComponent', () => {
     expect(button.length).toBe(1)
 
     await component.onSubmit()
-    expect(navigateSpy).toHaveBeenCalledWith(['dashboard'])
+    expect(navigateSpy).toHaveBeenCalledWith([DASHBOARD_PATH])
     expect(toastrSpy).toHaveBeenCalledWith('Login successful!')
   })
 })

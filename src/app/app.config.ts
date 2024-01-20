@@ -8,7 +8,7 @@ import { provideToastr } from 'ngx-toastr'
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
-    provideAnimations(), // required animations providers
-    provideToastr(), // Toastr providers
+    provideAnimations(),
+    provideToastr(),
   ],
 }

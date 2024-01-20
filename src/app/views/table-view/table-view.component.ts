@@ -2,6 +2,7 @@ import { Component } from '@angular/core'
 import { Workation } from '../../models/workation'
 import axios from 'axios'
 import { CommonModule, DatePipe } from '@angular/common'
+import { WORKATIONS_URL } from '../../constants'
 
 @Component({
   selector: 'app-table-view',
