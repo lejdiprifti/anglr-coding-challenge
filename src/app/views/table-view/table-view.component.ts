@@ -13,7 +13,7 @@ import { CommonModule, DatePipe } from '@angular/common'
 export class TableViewComponent {
   WORKATIONS_URL = 'http://localhost:8080/workflex/workation'
 
-  workations: Workation[] = []
+  public workations: Workation[] = []
 
   async ngOnInit() {
     await this.loadWorkations()

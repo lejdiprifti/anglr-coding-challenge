@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container mt-3" >
   <div class="table-responsive">
-    <table class="table table-bordered">
+    <table class="table table-bordered text-center">
       <thead>
         <tr>
           <th>Employee</th>
@@ -13,7 +13,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let workation of workations" class="text-center">
+        <tr *ngFor="let workation of workations">
           <td class="row name-td">
             <div class="avatar col-6">
               {{ workation.employee.split(' ')[0].charAt(0) }} {{ workation.employee.split(' ')[1].charAt(0) }}
