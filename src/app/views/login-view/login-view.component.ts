@@ -22,8 +22,8 @@ export class LoginViewComponent {
   email: string = ''
   password: string = ''
 
-  onSubmit() {
-    axios
+  async onSubmit() {
+    await axios
       .post(this.LOGIN_URL, {
         email: this.email,
         password: this.password,
